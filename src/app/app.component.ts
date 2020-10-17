@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'migration-forum-app';
+  isListMode = true;
+
+  onaddbuttonclick(){
+    this.isListMode = !this.isListMode;
+
+  }
 }

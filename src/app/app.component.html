@@ -1,11 +1,11 @@
 <app-header></app-header>
-<div class="container-fluid text-center">    
+<div class="container-fluid text-center">
+  <button type="button" class="btn btn-primary btn-sm" (click)=onaddbuttonclick()>Add</button>    
     <div class="row content">
-      <app-topiclist class="col-sm-2 sidenav"></app-topiclist>
-     <app-postlist class="col-sm-8 text-left"></app-postlist>
+      <app-topiclist class="col-sm-2 sidenav" *ngIf="isListMode"></app-topiclist>
+      <app-topiccreate class="col-sm-2 sidenav" *ngIf="!isListMode"></app-topiccreate>
+      <app-postlist class="col-sm-8 text-left"*ngIf="isListMode"></app-postlist>
+      <app-postcreate class="col-sm-8 text-left"*ngIf="!isListMode"></app-postcreate>
     </div>
   </div>
-  
-  <footer class="container-fluid text-center">
-    <p>Footer Text</p>
-  </footer>
+<app-footer class="container-fluid text-center"></app-footer>  

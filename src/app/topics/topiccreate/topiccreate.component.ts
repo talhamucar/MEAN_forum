@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { TopicService } from '../topic.service';
 
 @Component({
   selector: 'app-topiccreate',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopiccreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(public topicService: TopicService) { }
+
+  onAddTopic(form: NgForm) {
+    
+
+  }
 
   ngOnInit(): void {
   }
