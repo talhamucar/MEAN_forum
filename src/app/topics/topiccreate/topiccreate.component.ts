@@ -13,8 +13,11 @@ export class TopiccreateComponent implements OnInit {
   constructor(public topicService: TopicService) { }
 
   onAddTopic(form: NgForm) {
-    
-
+    if (form.invalid){
+      return;
+    }
+    this.topicService.addTopic(form.value.topic, form.value.firstPost);
+    form.resetForm();
   }
 
   ngOnInit(): void {

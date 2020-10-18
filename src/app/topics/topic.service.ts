@@ -17,10 +17,11 @@ export class TopicService {
     return this.topicsUpdated.asObservable();
   }
   
-  addTopic(name: string){
-    const topic: Topic = {name: name};
+  addTopic(name: string, firstPost: string){
+    const topic: Topic = {name: name, firstpost: firstPost};
     this.topics.push(topic);
     this.topicsUpdated.next([...this.topics]);
+    console.log(this.topics);
   }
 
 }
