@@ -1,13 +1,9 @@
 <div> 
-    <h3>Topic 2</h3>
-    <div class="card">
+    <h3>{{ topicName }}</h3>
+    <div *ngFor="let post of posts" class="card">
         <div class="card-body">
-            Migration is easy
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            Migration is not that hard
+            {{ post }}
         </div>
     </div>
 </div>
+

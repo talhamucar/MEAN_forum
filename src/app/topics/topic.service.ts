@@ -17,8 +17,8 @@ export class TopicService {
     return this.topicsUpdated.asObservable();
   }
   
-  addTopic(name: string, firstPost: string){
-    const topic: Topic = {name: name, firstpost: firstPost};
+  addTopic(name: string, firstPost: any){
+    const topic: Topic = {name: name, posts: [firstPost]};
     this.topics.push(topic);
     this.topicsUpdated.next([...this.topics]);
     console.log(this.topics);

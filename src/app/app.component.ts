@@ -11,6 +11,5 @@ export class AppComponent {
 
   onaddbuttonclick(){
     this.isListMode = !this.isListMode;
-
   }
 }

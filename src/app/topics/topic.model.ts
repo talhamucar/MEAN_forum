@@ -1,4 +1,5 @@
+import { Post } from '../posts/post.model';
 export interface Topic {
     name: string;
-    firstpost: string;
+    posts: Post[];
 }

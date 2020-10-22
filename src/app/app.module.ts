@@ -9,6 +9,7 @@ import { PostcreateComponent } from './posts/postcreate/postcreate.component';
 import { TopiccreateComponent } from './topics/topiccreate/topiccreate.component';
 import { TopiclistComponent } from './topics/topiclist/topiclist.component';
 import { FooterComponent } from './footer/footer.component';
+import { TopicService } from './topics/topic.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule, 
     FormsModule
   ],
-  providers: [],
+  providers: [TopicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
